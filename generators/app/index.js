@@ -31,6 +31,14 @@ writing: {
     this.fs.copy(
       this.templatePath('_lib/_routes.js'),
       this.destinationPath('lib/routes.js'));
+
+    this.fs.copy(
+      this.templatePath('_lib/_collections/_posts.js'),
+      this.destinationPath('lib/collections/posts.js'));
+
+    this.fs.copy(
+      this.templatePath('_server/_accounts.js'),
+      this.destinationPath('server/accounts.js'));
     //Server file
 
 
