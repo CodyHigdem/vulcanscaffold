@@ -3,6 +3,7 @@
 var yeoman = require('yeoman-generator');
 var chalk = require('chalk');
 var yosay = require('yosay');
+var mkdirp = require('mkdirp');
 
 module.exports = yeoman.generators.Base.extend({
 //Configurations will be loaded here.
@@ -26,7 +27,24 @@ writing: {
   //copy the configuration files
   //copy application files
   app: function(){
+    //comatibility
+    mkdirp.sync('/client/compatibility');
+    //VIEWS
+    this.fs.copy(
+      this.templatePath('_client/_views/_includes/_footer.html'),
+      this.destinationPath('client/views/includes/footer.html')
+    );
+    this.fs.copy(
+      this.templatePath('_client/_views/_includes/_nav.html'),
+      this.destinationPath('client/views/includes/nav.html')
+    );
+    //STATIC
+    this.fs.copy(
+      this.templatePath('_client/_views/_static/_about.html'),
+      this.destinationPath('client/views/static/about.html')
+    );
 
+    
     /////Routes
     this.fs.copy(
       this.templatePath('_lib/_routes.js'),
