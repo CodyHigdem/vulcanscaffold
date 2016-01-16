@@ -1,0 +1,25 @@
+{
+  "name": "generator-vulcan",
+  "version": "0.0.1",
+  "description": "meteorjs scaffolding tool",
+  "license": "MIT",
+  "repository": "https://github.com/qtheninja/vulcanscaffold",
+  "homepage": "https://github.com/qtheninja/vulcanscaffold",
+  "author": {
+    "name": "Cody",
+    "email": "meanderingmonarch@gmail.com",
+    "url": "codyhigdem.com"
+  },
+  "files": [
+    "generators/app/templates"
+  ],
+  "main": "app/index.js",
+  "keywords": [
+    ""
+  ],
+  "dependencies": {
+    "yeoman-generator": "^0.20.2",
+    "chalk": "^1.0.0",
+    "yosay": "^1.0.2"
+  }
+}
