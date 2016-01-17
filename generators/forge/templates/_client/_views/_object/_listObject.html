@@ -10,6 +10,7 @@
         <th>Top Speed</th>
         <th>Power</th>
         <th>Value</th>
+        <th>Edit</th>
       </tr>
     </thead>
     <tbody>
@@ -21,7 +22,8 @@
           <td>{{bodystyle}}</td>
           <td>{{topspeed}}</td>
           <td>{{power}}</td>
-          <td>{{value}}
+          <td>{{value}}</td>
+          <td>{{#linkTo route='edit<%= name %>'}}<span class="glyphicon glyphicon-edit" aria-hidden="true"></span>{{/linkTo}}</td>
         </tr>
       {{/each}}
     </tbody>

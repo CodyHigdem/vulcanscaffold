@@ -84,7 +84,7 @@ module.exports = yeoman.generators.Base.extend({
 //CREATE LIST INFO
   this.fs.copyTpl(
     this.templatePath('_client/_views/_object/_listObject.html'),
-    this.destinationPath('client/views/'+name+'/list'+name+'.html'),
+    this.destinationPath('client/views/'+name+'s/list'+name+'.html'),
     {
       name: this.props.name,
       lowerCase: this.props.name.toLowerCase()
@@ -93,13 +93,37 @@ module.exports = yeoman.generators.Base.extend({
 //CREATE listObject helper
   this.fs.copyTpl(
     this.templatePath('_client/_views/_object/_listObject.html'),
-    this.destinationPath('client/views/'+lowerCase+'/list'+name+'.html'),
+    this.destinationPath('client/views/'+lowerCase+'s/list'+name+'.html'),
     {
       name: this.props.name,
       lowerCase: this.props.name.toLowerCase()
     }
   );  
-
+//CREATE listObject helper
+  this.fs.copyTpl(
+    this.templatePath('_client/_views/_object/_edit/_editObject.html'),
+    this.destinationPath('client/views/'+lowerCase+'s/edit/edit'+name+'.html'),
+    {
+      name: this.props.name,
+      lowerCase: this.props.name.toLowerCase()
+    }
+  );
+  this.fs.copyTpl(
+    this.templatePath('_client/_views/_object/_edit/_editObject.js'),
+    this.destinationPath('client/views/'+lowerCase+'s/edit/edit'+name+'.js'),
+    {
+      name: this.props.name,
+      lowerCase: this.props.name.toLowerCase()
+    }
+  );
+  this.fs.copyTpl(
+    this.templatePath('_client/_views/_object/_listObject.js'),
+    this.destinationPath('client/views/'+lowerCase+'s/list'+name+'.js'),
+    {
+      name: this.props.name,
+      lowerCase: this.props.name.toLowerCase()
+    }
+  );  
     //END WRITING 
   },
   updatePublish: function () {
@@ -131,6 +155,13 @@ updateRoutes: function(){
       " name: 'list"+name+"s',",
       " controller: '"+name+"sController',",
       " action: 'list',",
+      " where: 'client'",
+      "});",
+      "",
+      "Router.route('/"+name+"s/:_id/edit', {",
+      " name: 'edit"+name+"s',",
+      " controller: '"+name+"sController',",
+      " action: 'edit',",
       " where: 'client'",
       "});",
       "",
