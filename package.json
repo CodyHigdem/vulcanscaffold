@@ -11,7 +11,8 @@
     "url": "codyhigdem.com"
   },
   "files": [
-    "generators/app/templates"
+    "generators/app/templates",
+    "generators/forge"
   ],
   "main": "app/index.js",
   "keywords": [
@@ -20,6 +21,7 @@
   "dependencies": {
     "yeoman-generator": "^0.20.2",
     "chalk": "^1.0.0",
-    "yosay": "^1.0.2"
+    "yosay": "^1.0.2",
+    "html-wiring": "1.2.0"
   }
 }

@@ -58,7 +58,9 @@ writing: {
       this.templatePath('_server/_accounts.js'),
       this.destinationPath('server/accounts.js'));
     //Server file
-
+    this.fs.copy(
+      this.templatePath('_server/_publish.js'),
+      this.destinationPath('server/publish.js'));
 
 
     //client folder

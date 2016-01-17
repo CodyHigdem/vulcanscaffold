@@ -1,0 +1,29 @@
+<template name="list<%= name%>s">
+  <h1>Cars List</h1>
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Brand</th>
+        <th>Model</th>
+        <th>Fuel Type</th>
+        <th>Body Style</th>
+        <th>Top Speed</th>
+        <th>Power</th>
+        <th>Value</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each <%= name %>s}}
+        <tr>
+          <td>{{brand}}</td>
+          <td>{{model}}</td>
+          <td>{{fueltype}}</td>
+          <td>{{bodystyle}}</td>
+          <td>{{topspeed}}</td>
+          <td>{{power}}</td>
+          <td>{{value}}
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</template>
