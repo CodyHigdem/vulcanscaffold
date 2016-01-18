@@ -69,8 +69,8 @@ writing: {
       this.destinationPath('client/views/includes/footer.html')
     );
     this.fs.copy(
-      this.templatePath('_client/_views/_includes/_nav.html'),
-      this.destinationPath('client/views/includes/nav.html')
+      this.templatePath('_client/_views/_includes/_navbar.html'),
+      this.destinationPath('client/views/includes/navbar.html')
     );
     //CLIENT //VIEWS //STATIC FILES
     this.fs.copy(

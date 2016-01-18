@@ -11,7 +11,7 @@
     this.render('create<%= name %>', {});
   },
   list: function(){
-  	this.render('list<%= name %>', {});
+  	this.render('list<%= name %>s', {});
   },
   edit: function(){
   	this.render('edit<%= name %>', {});

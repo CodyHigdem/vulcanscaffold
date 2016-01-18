@@ -76,7 +76,7 @@ module.exports = yeoman.generators.Base.extend({
 //CREATE LIST INFO
   this.fs.copyTpl(
     this.templatePath('_client/_views/_object/_listObject.html'),
-    this.destinationPath('client/views/'+name+'s/list'+name+'.html'),
+    this.destinationPath('client/views/'+lowerCase+'s/list'+name+'.html'),
     {
       name: this.props.name,
       lowerCase: this.props.name.toLowerCase()
@@ -136,21 +136,21 @@ updateRoutes: function(){
     var lowerCase = this.props.name.toLowerCase();
     var name = this.props.name;
     var routeText = [
-      "Router.route('/"+name+"s/create', {",
+      "Router.route('/"+lowerCase+"s/create', {",
       " name: 'create"+name+"',",
       " controller: '"+name+"sController',",
       " action: 'create',",
       " where: 'client'",
       "});",
       "",
-      "Router.route('/"+name+"s', {",
+      "Router.route('/"+lowerCase+"s', {",
       " name: 'list"+name+"s',",
       " controller: '"+name+"sController',",
       " action: 'list',",
       " where: 'client'",
       "});",
       "",
-      "Router.route('/"+name+"s/:_id/edit', {",
+      "Router.route('/"+lowerCase+"s/:_id/edit', {",
       " name: 'edit"+name+"s',",
       " controller: '"+name+"sController',",
       " action: 'edit',",
