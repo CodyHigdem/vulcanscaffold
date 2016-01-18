@@ -88,7 +88,7 @@ if (Meteor.isServer) {
     autoform:{
       type: 'hidden',
       label: false
-    }
+    },
     optional: true
   },
 }));

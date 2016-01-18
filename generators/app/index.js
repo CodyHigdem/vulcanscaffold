@@ -27,9 +27,43 @@ writing: {
   //copy the configuration files
   //copy application files
   app: function(){
-    //comatibility
+
+    //.meteor file
+    this.fs.copy(
+      this.templatePath('.meteor/.finished-upgraders'),
+      this.destinationPath('.meteor/.finished-upgraders')
+    );
+    this.fs.copy(
+      this.templatePath('.meteor/.gitignore'),
+      this.destinationPath('.meteor/.gitignore')
+    );
+    this.fs.copy(
+      this.templatePath('.meteor/.id'),
+      this.destinationPath('.meteor/.id')
+    );
+    this.fs.copy(
+      this.templatePath('.meteor/packages'),
+      this.destinationPath('.meteor/packages')
+    );
+    this.fs.copy(
+      this.templatePath('.meteor/platforms'),
+      this.destinationPath('.meteor/platforms')
+    );
+    this.fs.copy(
+      this.templatePath('.meteor/release'),
+      this.destinationPath('.meteor/release')
+    );
+    this.fs.copy(
+      this.templatePath('.meteor/versions'),
+      this.destinationPath('.meteor/verions')
+    );
+    //CLIENT //COMPATIBILITY
     mkdirp.sync('/client/compatibility');
-    //VIEWS
+    //VIEWS //INCLUDES
+    this.fs.copy(
+      this.templatePath('_client/_views/_includes/_accessDenied.html'),
+      this.destinationPath('client/views/includes/accessDenied.html')
+    ); 
     this.fs.copy(
       this.templatePath('_client/_views/_includes/_footer.html'),
       this.destinationPath('client/views/includes/footer.html')
@@ -38,22 +72,70 @@ writing: {
       this.templatePath('_client/_views/_includes/_nav.html'),
       this.destinationPath('client/views/includes/nav.html')
     );
-    //STATIC
+    //CLIENT //VIEWS //STATIC FILES
     this.fs.copy(
       this.templatePath('_client/_views/_static/_about.html'),
       this.destinationPath('client/views/static/about.html')
     );
+    this.fs.copy(
+      this.templatePath('_client/_views/_static/_home.html'),
+      this.destinationPath('client/views/static/home.html')
+    );
+    this.fs.copy(
+      this.templatePath('_client/_views/_static/_landingPage.html'),
+      this.destinationPath('client/views/static/landingPage.html')
+    );
+    this.fs.copy(
+      this.templatePath('_client/_views/_static/_login.html'),
+      this.destinationPath('client/views/static/login.html')
+    );
+    this.fs.copy(
+      this.templatePath('_client/_views/_static/_privacyPolicy.html'),
+      this.destinationPath('client/views/static/privacyPolicy.html')
+    );
+    this.fs.copy(
+      this.templatePath('_client/_views/_static/_register.html'),
+      this.destinationPath('client/views/static/register.html')
+    );        
+    this.fs.copy(
+      this.templatePath('_client/_views/_static/_tos.html'),
+      this.destinationPath('client/views/static/tos.html')
+    );
+    //CLIENT //VIEWS //LAYOUTS
+    this.fs.copy(
+      this.templatePath('_client/_views/_layouts/_masterLayout.html'),
+      this.destinationPath('client/views/layouts/masterLayout.html')
+    ); 
+    //CLIENT 
+    this.fs.copy(
+      this.templatePath('_client/_main.html'),
+      this.destinationPath('client/main.html')
+    );
+    this.fs.copy(
+      this.templatePath('_client/_main.js'),
+      this.destinationPath('client/main.js')
+    );  
+    //LIB //COLLECTIONS
+    this.fs.copy(
+      this.templatePath('_lib/_collections/_posts.js'),
+      this.destinationPath('lib/collections/posts.js')); 
+    //LIB //CONTROLLERS
 
-    
-    /////Routes
+    //LIB //METHODS
+    this.fs.copy(
+      this.templatePath('_lib/_methods.js'),
+      this.destinationPath('lib/methods.js'));   
+    //LIB ///ROUTES
     this.fs.copy(
       this.templatePath('_lib/_routes.js'),
       this.destinationPath('lib/routes.js'));
-
-    this.fs.copy(
-      this.templatePath('_lib/_collections/_posts.js'),
-      this.destinationPath('lib/collections/posts.js'));
-
+    //PUBLIC
+    mkdirp.sync('public/fonts');
+    mkdirp.sync('public/img');
+    mkdirp.sync('public/js');
+    //PRIVATE
+    mkdirp.sync('private');
+    //SERVER
     this.fs.copy(
       this.templatePath('_server/_accounts.js'),
       this.destinationPath('server/accounts.js'));
@@ -61,13 +143,11 @@ writing: {
     this.fs.copy(
       this.templatePath('_server/_publish.js'),
       this.destinationPath('server/publish.js'));
-
-
-    //client folder
     this.fs.copy(
-      this.templatePath('_client/_compatibility'),
-      this.templatePath('_clients/_views/_main.html')
-      );
+      this.templatePath('_server/_methods.js'),
+      this.destinationPath('server/publish.js'));
+
+
   }
 
 },

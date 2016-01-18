@@ -1,1 +1,1 @@
-//acounts
+//SERVER ONLY METHODS

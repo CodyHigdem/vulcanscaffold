@@ -31,14 +31,6 @@ module.exports = yeoman.generators.Base.extend({
     var name = this.props.name;
     var lowerCase = this.props.name.toLowerCase();
 
-
-    this.fs.copyTpl(
-      this.templatePath('dummyfile.html'),
-      this.destinationPath('dummyfile.html'), {
-        name: this.props.name
-      }
-    );
-
     this.fs.copyTpl(
       this.templatePath('_lib/_collections/_collections.js'),
       this.destinationPath('lib/collections/'+this.props.name+'s.js'), {

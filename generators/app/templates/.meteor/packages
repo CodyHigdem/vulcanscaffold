@@ -1,0 +1,33 @@
+# Meteor packages used by this project, one per line.
+# Check this file (and the other files in this directory) into your repository.
+#
+# 'meteor add' and 'meteor remove' will edit this file for you,
+# but you can also edit it by hand.
+
+accounts-password
+aldeed:autoform
+aldeed:collection2
+cooperm:side-comments
+fortawesome:fontawesome
+iron:router
+twbs:bootstrap
+useraccounts:bootstrap
+useraccounts:core
+dsyko:hopscotch
+aldeed:delete-button
+accounts-google
+service-configuration
+standard-minifiers
+meteor-base
+mobile-experience
+mongo
+blaze-html-templates
+session
+jquery
+tracker
+logging
+reload
+random
+ejson
+spacebars
+check
