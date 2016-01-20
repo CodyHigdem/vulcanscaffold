@@ -149,7 +149,7 @@ writing: {
       this.destinationPath('server/publish.js'));
     this.fs.copy(
       this.templatePath('_server/_methods.js'),
-      this.destinationPath('server/publish.js'));
+      this.destinationPath('server/methods.js'));
 
 
   }

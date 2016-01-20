@@ -1,5 +1,5 @@
 <template name="list<%= name%>s">
-  <h1>Cars List</h1>
+  <h1><%= name %>s List</h1>
   <table class="table table-hover">
     <thead>
       <tr>
@@ -14,7 +14,7 @@
       </tr>
     </thead>
     <tbody>
-      {{#each <%= name %>s}}
+      {{#each <%= lowerCase %>s}}
         <tr>
           <td>{{brand}}</td>
           <td>{{model}}</td>
@@ -23,7 +23,7 @@
           <td>{{topspeed}}</td>
           <td>{{power}}</td>
           <td>{{value}}</td>
-          <td>{{#linkTo route='edit<%= name %>'}}<span class="glyphicon glyphicon-edit" aria-hidden="true"></span>{{/linkTo}}</td>
+          <td>{{#linkTo route='edit<%= name %>s'}}<span class="glyphicon glyphicon-edit" aria-hidden="true"></span>{{/linkTo}}</td>
         </tr>
       {{/each}}
     </tbody>

@@ -81,13 +81,6 @@ if (Meteor.isServer) {
     },
     autoValue: function(){
       return this.userId;
-    }
-  },
-  anotherid: {
-    type: String,
-    autoform:{
-      type: 'hidden',
-      label: false
     },
     optional: true
   },

@@ -122,7 +122,7 @@ module.exports = yeoman.generators.Base.extend({
     var lowerCase = this.props.name.toLowerCase();
     var name = this.props.name;
     var routeText = [
-      "Meteor.publish('"+lowerCase+"',function () {",
+      "Meteor.publish('"+lowerCase+"s',function () {",
       " return "+name+"s.find();",
       "});",
       "//===== yeoman hook =====//"
