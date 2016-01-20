@@ -4,17 +4,30 @@ Yeoman based MeteorJS scaffolding tool.
 
 ##Yo Vulcan
 Will setup file structure as
-
+.meteor
+	.finished-upgraders
+	.gitignore
+	.id
+	packages
+	platforms
+	release
+	versions
 client
 	compatibility
 	views
 		includes
+			accessDenied.html
 			footer.html
 			nav.html
+			notFound.html
+		layouts
+			masterLayout.html
 		static
 			about.html
+			home.html
 			landingPage.html
 			login.html
+			privacyPolicy.html
 			register.html
 			tos.html
 			privacyPolicy.html
@@ -25,6 +38,7 @@ lib
 		posts.js
 	controllers
 		PostsControllers.js
+	methods.js
 	routes.js
 public
 	fonts
@@ -34,6 +48,48 @@ server
 	accounts.js
 	methods.js
 	publish.js
+
+## yo vulcan:forge
+The forge subgenerator is designed to createa  CRUD setup using Aldeed's simple schema and autoforms combined with iron router. 
+You'll have to agree to overwrite the publish.js and routes.js as both contain a string hook to have information written inside of it. 
+
+You'll be prompted for a specific name of your schema. Write the schema as you would into your database. So for example wanting a Cats schema. 
+
+Cat. The generator alters the Cat to cat at a few locations and also appends an S to it. 
+
+yo vulcan:forge
+
+What is the name of your schema? Car
+
+Generators the following 
+
+lib
+	routes.js
+	collections
+		Cars.js
+	controllers
+		carsController.js
+client
+	views
+		cars
+			create
+				createCar.html
+				createCar.css
+				createCar.js
+			edit
+				editCar.html
+				editCar.js
+			listCar.js
+			listCar.html
+
+The URL structure can be found in Routes but it follows this.
+
+/cars
+	Lists all of the cars using a simple table.
+/cars/create
+	a insert form
+/cars/:_id/edit
+	Edit ability on a specific item
 
 
 ##Notes:
