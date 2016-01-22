@@ -2,6 +2,10 @@
 
 Yeoman based MeteorJS scaffolding tool. 
 
+#Getting Started
+
+
+
 ##Yo Vulcan
 Will setup file structure as
 .meteor

@@ -10,11 +10,9 @@ Router.configure({
   layoutTemplate: 'MasterLayout',
   notFoundTemplate: 'notFound',
 });
-
 /**
 * Static Routes
 **/
-
 Router.route('/tos', {name: 'tos'});
 Router.route('/hello', {name: 'landingPage'});
 Router.route('/about', {name: 'about'});
