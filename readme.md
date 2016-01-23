@@ -4,6 +4,13 @@ Yeoman based MeteorJS scaffolding tool.
 
 #Getting Started
 
+`git clone https://github.com/qtheninja/vulcanscaffold.git`
+in the directory
+`npm install
+npm link
+yo vulcan`
+
+
 
 
 ##Yo Vulcan
