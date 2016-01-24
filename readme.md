@@ -7,13 +7,12 @@ Yeoman based MeteorJS scaffolding tool.
 `git clone https://github.com/qtheninja/vulcanscaffold.git`
 
 in the directory
-`npm install
 
-npm link
+`npm install`
 
-yo vulcan`
+`npm link`
 
-
+`yo vulcan`
 
 
 ##Yo Vulcan
@@ -69,7 +68,17 @@ You'll have to agree to overwrite the publish.js and routes.js as both contain a
 
 You'll be prompted for a specific name of your schema. Write the schema as you would into your database. So for example wanting a Cats schema. 
 
-Cat. The generator alters the Cat to cat at a few locations and also appends an S to it. 
+Cat. The generator alters the Cat to cat at a few locations and also appends an S to it. So when using yo vulcan:forge make sure to use the right information. 
+
+You will almost immediatly have to update
+
+1. Collections
+2. Routes
+3. createObject.html
+4. editObject.html
+5. listObject.html
+
+As these are cookie cutter statements.  
 
 yo vulcan:forge
 
