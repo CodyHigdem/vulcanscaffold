@@ -16,3 +16,26 @@ if (Meteor.isServer) {
     }
   });
 }
+
+Posts.attachSchema(new SimpleSchema({
+  title: {
+    type: String,
+    label: "Title",
+    max: 100
+  },
+  body: {
+    type: String,
+    label: "Body"
+  },
+  publishDate: {
+    type: String,
+    label: "Fuel Type",
+    allowedValues: ['Petrol', 'Diesel', 'Hybrid', 'Electric'],
+  },
+  tags: {
+    type: String,
+    label: "Body Style",
+    allowedValues: ['Convertibles', 'Coupes', 'Hatchbacks', 'Vans', 'Sedans', 'Suvs', 'Trucks', 'Wagons'],
+    optional: true
+  },
+}));
