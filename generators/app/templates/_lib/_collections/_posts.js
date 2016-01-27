@@ -21,17 +21,29 @@ Posts.attachSchema(new SimpleSchema({
   title: {
     type: String,
     label: "Title",
-    max: 100
+    max: 244
   },
   body: {
     type: String,
     label: "Body"
   },
   publishDate: {
-    type: String,
-    label: "Fuel Type",
-    allowedValues: ['Petrol', 'Diesel', 'Hybrid', 'Electric'],
-  },
+    type: Date,
+    autoform: {
+      type: 'hidden',
+      label: false
+    },
+  }
+  createdAt: {
+    type: Date,
+      autoform: {
+        type: 'hidden',
+        label: false
+      },
+      autoValue: function(){
+        return new Date();
+      }
+    }
   tags: {
     type: String,
     label: "Body Style",
