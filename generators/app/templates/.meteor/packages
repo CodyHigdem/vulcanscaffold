@@ -32,3 +32,6 @@ ejson
 spacebars
 check
 yogiben:admin
+dburles:collection-helpers
+alanning:roles
+fortawesome:fontawesome
