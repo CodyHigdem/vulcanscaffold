@@ -62,6 +62,41 @@ server
 	methods.js
 	publish.js
 
+
+###Packages in the original app
+The idea behind the generator was to make a simple out of the box concept. 
+The following are packages that will be present in out of the box:
+accounts-password
+aldeed:autoform
+aldeed:collection2
+cooperm:side-comments
+fortawesome:fontawesome
+iron:router
+twbs:bootstrap
+useraccounts:bootstrap
+useraccounts:core
+dsyko:hopscotch
+aldeed:delete-button
+accounts-google
+service-configuration
+standard-minifiers
+meteor-base
+mobile-experience
+mongo
+blaze-html-templates
+session
+jquery
+tracker
+logging
+reload
+random
+ejson
+spacebars
+check
+yogiben:admin
+dburles:collection-helpers
+alanning:roles
+fortawesome:fontawesome
 ## yo vulcan:forge
 The forge subgenerator is designed to createa  CRUD setup using Aldeed's simple schema and autoforms combined with iron router. 
 You'll have to agree to overwrite the publish.js and routes.js as both contain a string hook to have information written inside of it. 
