@@ -33,7 +33,7 @@ Posts.attachSchema(new SimpleSchema({
       type: 'hidden',
       label: false
     },
-  }
+  },
   createdAt: {
     type: Date,
       autoform: {
@@ -43,7 +43,7 @@ Posts.attachSchema(new SimpleSchema({
       autoValue: function(){
         return new Date();
       }
-    }
+    },
   tags: {
     type: String,
     label: "Body Style",
