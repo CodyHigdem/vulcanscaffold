@@ -1,5 +1,5 @@
 AdminConfig = { 
-//adminEmails: [''], 
+//adminEmails: ['ENTERYOUREMAIL@DOMAIN.COM'], 
 collections: 
 { 
 Posts: {}, 

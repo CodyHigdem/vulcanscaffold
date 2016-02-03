@@ -29,7 +29,4 @@ Router.route('/logout', function(){
     Router.go('/');
   });
 });
-Router.route('/admin', {
-	name: 'admin'
-});
 Router.route('/', {name: 'home'});
