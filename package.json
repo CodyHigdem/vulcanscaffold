@@ -1,12 +1,12 @@
 {
   "name": "generator-vulcan",
   "version": "0.0.1",
-  "description": "meteorjs scaffolding tool",
+  "description": "A Meteorjs scaffolding tool for simple CRUD and a 'meteor out of the box' app.",
   "license": "MIT",
   "repository": "https://github.com/qtheninja/vulcanscaffold",
   "homepage": "https://github.com/qtheninja/vulcanscaffold",
   "author": {
-    "name": "Cody",
+    "name": "Cody Higdem",
     "email": "meanderingmonarch@gmail.com",
     "url": "codyhigdem.com"
   },
@@ -16,7 +16,7 @@
   ],
   "main": "app/index.js",
   "keywords": [
-    ""
+    "Meteorjs", "yeoman-generator"
   ],
   "dependencies": {
     "yeoman-generator": "^0.20.2",
