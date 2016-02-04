@@ -149,7 +149,8 @@ The URL structure can be found in Routes but it follows this.
 `/cars/:_id/edit`
 	Edit ability on a specific item
 
-
-##Notes:
-A nice article about yeoman writing generators
+Sources:
+https://scotch.io/tutorials/how-to-speed-up-meteor-development-with-scaffolding-and-automatic-form-generation
+https://scotch.io/tutorials/create-a-custom-yeoman-generator-in-4-easy-steps
+http://yeoman.io/authoring/
 http://paulfreeman.me.uk/development/process/how-i-came-to-love-yeoman-by-writing-my-own-generators
