@@ -97,13 +97,17 @@ yogiben:admin
 dburles:collection-helpers
 alanning:roles
 fortawesome:fontawesome
+
 ## yo vulcan:forge
 The forge subgenerator is designed to createa  CRUD setup using Aldeed's simple schema and autoforms combined with iron router. 
 You'll have to agree to overwrite the publish.js and routes.js as both contain a string hook to have information written inside of it. 
 
 You'll be prompted for a specific name of your schema. Write the schema as you would into your database. So for example wanting a Cats schema. 
+You would enter the name as: `Cat`
 
-Cat. The generator alters the Cat to cat at a few locations and also appends an S to it. So when using yo vulcan:forge make sure to use the right information. 
+The generator alters the 'Cat' to cat at a few locations and also appends an S to it for a few other locations. So when using yo vulcan:forge make sure to use the right information. 
+
+Currently the vulcan:forge command is very simple. For example, trying to make a mouse schema would result in Mouse, Mouses not Mice. 
 
 You will almost immediatly have to update
 
