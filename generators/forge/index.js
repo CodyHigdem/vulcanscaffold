@@ -157,6 +157,11 @@ updateRoutes: function(){
       " where: 'client'",
       "});",
       "",
+      "Router.route('/"+lowerCase+"/:_id', {",
+      " name: '"+lowerCase+"',",
+      " data: function(){",
+      " return "+name+"s.findOne({_id: this.params._id});",
+      " });",
       "//===== yeoman hook =====//"
      ];
     var indexFile = require('html-wiring').readFileAsString('lib/routes.js');
