@@ -18,54 +18,54 @@ in the directory
 ##Yo Vulcan
 Will setup file structure as
 
-.meteor
-	.finished-upgraders
-	.gitignore
-	.id
-	packages
-	platforms
-	release
-	versions
++ .meteor
+- 	.finished-upgraders
+-	.gitignore
+-	.id
+-	packages
+-	platforms
+-	release
+-	versions
 
-client
-	compatibility
-	views
-		includes
-			accessDenied.html
-			footer.html
-			nav.html
-			notFound.html
-		layouts
-			masterLayout.html
-		static
-			about.html
-			home.html
-			landingPage.html
-			login.html
-			privacyPolicy.html
-			register.html
-			tos.html
-			privacyPolicy.html
-		main.html
-		main.js
++ client
+	- compatibility
+	- views
+		- - includes
+			- - - accessDenied.html
+			- - - footer.html
+			- - - nav.html
+			- - - notFound.html
+		- - layouts
+			- - - masterLayout.html
+		- - static
+			- - - about.html
+			- - - home.html
+			- - - landingPage.html
+			- - - login.html
+			- - - privacyPolicy.html
+			- - - register.html
+			- - - tos.html
+			- - - privacyPolicy.html
+		- main.html
+		- main.js
 
-lib
-	collections
-		posts.js
-	controllers
-		PostsControllers.js
-	methods.js
-	routes.js
++ lib
+	- collections
+	- - 	posts.js
+	- controllers
+	- -	PostsControllers.js
+	- methods.js
+	- routes.js
 
-public
-	fonts
-	img
-	js
-	
-server
-	accounts.js
-	methods.js
-	publish.js
++ public
+	- fonts
+	- img
+	- js
+
++ server
+- 	accounts.js
+-	methods.js
+-	publish.js
 
 
 ###Packages in the original app
