@@ -161,6 +161,7 @@ updateRoutes: function(){
       " name: '"+lowerCase+"',",
       " data: function(){",
       " return "+name+"s.findOne({_id: this.params._id});",
+      " } ",
       " });",
       "//===== yeoman hook =====//"
      ];

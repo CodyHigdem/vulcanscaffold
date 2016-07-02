@@ -57,8 +57,16 @@ writing: {
       this.templatePath('.meteor/versions'),
       this.destinationPath('.meteor/verions')
     );
+    /**
+    REMOVED FOR NOW
+    // mkdirp.sync('/client');
     //CLIENT //COMPATIBILITY
-    mkdirp.sync('/client/compatibility');
+    //mkdirp.sync('/client/compatibility');
+    **/
+    this.fs.copy(
+      this.templatePath('_client/_compatibility/_readme.md'),
+      this.destinationPath('client/compatibility/readme.md')
+    );
     //VIEWS //INCLUDES
     this.fs.copy(
       this.templatePath('_client/_views/_includes/_accessDenied.html'),
